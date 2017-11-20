@@ -18,12 +18,6 @@ const styles = require('./styles.js');
 
 const SwipePager = require('./components/swipePager.js');
 const StatusBar = require('./components/searchBar.js');
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
 
 export default class App extends Component<{}> {
 
@@ -32,8 +26,9 @@ export default class App extends Component<{}> {
     this.state = {
       isLoading: true,
       weather: 'default weather',
+      city: '',
     };
-    this.handleWeather = this.handleWeather.bind(this);
+  //  this.handleWeather = this.handleWeather.bind(this);
   }
 
   componentDidMount() {
@@ -57,7 +52,7 @@ export default class App extends Component<{}> {
 
     return (
         <View style={styles.motherView}>
-        <StatusBar onChange={this.handleWeather}/>
+        <StatusBar onChange={this.handleWeather.bind(this)}/>
         <SwipePager currentWeather={this.state.weather}/>
         </View>
     );

@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  textInput: {width: width*0.8, height: 50, justifyContent: 'center'},
+  textInput: {width: width-120, height: 50, justifyContent: 'center'},
   welcome: {
     textAlign: 'center',
     fontSize: 15,
@@ -39,6 +39,11 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     backgroundColor: '#000000',
   },
+  searchBar: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    margin: 10,
+  },
   list: {
     alignItems: 'center',
     flexDirection: 'column',
@@ -53,7 +58,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#000000',
     flexWrap: 'wrap',
     marginRight: width*0.02,
-    fontSize: 15,
+    fontSize: 20,
     color: '#FFFFFF',
   },
   wrapper: {
